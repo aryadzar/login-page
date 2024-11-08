@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login success</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom styling for 3D hover effect */
+    .hover-3d:hover {
+      transform: scale(1.03) rotateX(3deg) rotateY(3deg);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Animated background gradient */
+    .animated-gradient {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(120deg, #ffa200, #feb47b, #1e91fe, #91eae4);
+      background-size: 400% 400%;
+      z-index: -1;
+      animation: gradientAnimation 15s ease infinite;
+    }
+    
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Background image with gradient overlay inside the login box */
+    .login-box {
+        position: relative;
+        background: url('https://res.cloudinary.com/din8s15ri/image/upload/v1730705492/Rectangle_1_f1bvcc.png');
+        background-size: 150% 150%; /* Buat gambar memenuhi seluruh div */
+        background-repeat: no-repeat;
+        background-position: center; /* Pusatkan gambar di tengah */
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="animated-gradient"></div>
+    
+    <div class="login-box w-full max-w-sm p-8 bg-white border-2 border-yellow-500 rounded-lg shadow-lg hover-3d transition-transform duration-300">
+        <!-- Logo UNILA -->
+        <div class="flex justify-center mb-4">
+            <img src="https://res.cloudinary.com/din8s15ri/image/upload/v1730704531/Group_1_1_ffuvdu.png" alt="Logo Unila" class="h-20">
+        </div>
+
+        <!-- Login Text -->
+        <p class="text-center text-yellow-600 text-xl font-bold mb-10">Hayooo, Kamu Buka Situs Apatuh?
+            Jangan ya Dek ya...</p>
+        <!-- Login Text -->
+        <p class="text-center text-black font-bold mb-10">Halaman situs yang mau kamu buka di blokir dikarenakan URL telah di blacklist</p>
+        
+        <!-- Login Form -->
+        <div class="p-4  space-y-2 text-gray-800 max-w-xs">
+            <div class="flex justify-between">
+                <span class="font-semibold">URL</span>
+                <span>http://www.example.com/</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">Description</span>
+                <span>Request Blocked</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-semibold">URL Source</span>
+                <span>Blocking Source</span>
+            </div>
+        </div>
+        
+        <div class="flex justify-between mt-14 mb-10">
+            <img class=" rounded-md" src="https://s3-alpha-sig.figma.com/img/704b/4626/efc7a8a34b680079274d9bfce1592af9?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RnkBsv0g0~BHeGxlUImZnjxdINLCmLmiLx3i43JHxNMSmqx6Am7RjOZixaFA3dD8GgM00kAI4tnkBbCba2gBIk9WQAyJT6rt3RxwrUzzqzavP5Etp2dVK8frPSQZ4Ni8tbq6gGdofzjQGGMBRbvp5c-JXWJX5PkaMZFWaZmZsXDo34b42QGAZ4PvbxpUfurcExGeFDVjmRGuAxcW6DY5L0FQ5Mip8hZ4b2XkxAKXwSZ9w0Hg~D4bFZfzW6MXqLuYG5AJmTiqfr1q~ZGw4r3PbKH5uQrflFDYx0RoaAYliPSpSE2TeMHnE8y13fuDASxrxTRDn04PPpDWqMIVy1bSug__" alt="">
+        </div>
+        
+    </div>
+</body>
+</html>
